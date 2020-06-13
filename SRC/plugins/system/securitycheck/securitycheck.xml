@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>System - Securitycheck</name>
+	<author>José A. Luque </author>
+	<creationDate>28-04-2020</creationDate>
+	<copyright>Copyright www.protegetuordenador.com</copyright>
+	<license>GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<authorEmail>contacto@protegetuordenador.com</authorEmail>
+	<authorUrl>www.protegetuordenador.com</authorUrl>
+	<version>3.1.12</version>
+	<description>PLG_SECURITYCHECK_DESCRIPTION</description>
+	
+	<files>
+		<filename plugin="securitycheck">securitycheck.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_securitycheck.ini</language>
+		<language tag="en-GB">en-GB.plg_system_securitycheck.sys.ini</language>		
+		<language tag="es-ES">es-ES.plg_system_securitycheck.ini</language>
+		<language tag="es-ES">es-ES.plg_system_securitycheck.sys.ini</language>
+		<language tag="nl-NL">nl-NL.plg_system_securitycheck.ini</language>
+		<language tag="nl-NL">nl-NL.plg_system_securitycheck.sys.ini</language>
+		<language tag="ja-JP">ja-JP.plg_system_securitycheck.ini</language>
+		<language tag="ja-JP">ja-JP.plg_system_securitycheck.sys.ini</language>
+		<language tag="fr-FR">fr-FR.plg_system_securitycheck.ini</language>
+		<language tag="fr-FR">fr-FR.plg_system_securitycheck.sys.ini</language>
+		<language tag="pt-BR">pt-BR.plg_system_securitycheck.ini</language>
+		<language tag="pt-BR">pt-BR.plg_system_securitycheck.sys.ini</language>
+		<language tag="ca-ES">ca-ES.plg_system_securitycheck.ini</language>
+		<language tag="ca-ES">ca-ES.plg_system_securitycheck.sys.ini</language>
+		<language tag="ru-RU">ru-RU.plg_system_securitycheck.ini</language>
+		<language tag="ru-RU">ru-RU.plg_system_securitycheck.sys.ini</language>
+		<language tag="pl-PL">pl-PL.plg_system_securitycheck.ini</language>
+		<language tag="pl-PL">pl-PL.plg_system_securitycheck.sys.ini</language>
+		<language tag="nl-NL">nl-NL.plg_system_securitycheck.ini</language>
+		<language tag="nl-NL">nl-NL.plg_system_securitycheck.sys.ini</language>
+	</languages>
+		
+	<config>
+		<fields name="params">
+			<fieldset name="Lists" label="PLG_SECURITYCHECK_LISTS_LABEL" description="PLG_SECURITYCHECK_LISTS_DESCRIPTION">	
+			
+				<field name="blacklist" type="textarea" default="" label="PLG_SECURITYCHECK_BLACKLIST_LABEL" description="PLG_SECURITYCHECK_BLACKLIST_DESCRIPTION" rows="5" cols="17" />
+				
+				<field name="whitelist" type="textarea" default="" label="PLG_SECURITYCHECK_WHITELIST_LABEL" description="PLG_SECURITYCHECK_WHITELIST_DESCRIPTION" rows="5" cols="17" />
+			</fieldset>
+				
+			<fieldset name="Methods_inspected" label="PLG_SECURITYCHECK_METHODS_INSPECTED_LABEL" description="PLG_SECURITYCHECK_METHODS_INSPECTED_DESCRIPTION">			
+				<field name="methods" type="list" default="GET,POST,REQUEST" label="PLG_SECURITYCHECK_METHODS_LABEL" description="PLG_SECURITYCHECK_METHODS_DESCRIPTION">
+					<option value="GET,POST,REQUEST">Get, Post, Request</option>					
+				</field>
+			</fieldset>
+			
+			<fieldset name="Mode_fieldset" label="PLG_SECURITYCHECK_MODE_FIELDSET_LABEL" description="PLG_SECURITYCHECK_MODE_FIELDSET_DESCRIPTION">
+				<field name="mode" type="radio" default="1" label="PLG_SECURITYCHECK_MODEL_LABEL" description="PLG_SECURITYCHECK_MODEL_DESCRIPTION">
+					<option value="1">PLG_SECURITYCHECK_STRICT_MODE</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="Logs" label="PLG_SECURITYCHECK_LOGS_LABEL" description="PLG_SECURITYCHECK_LOGS_DESCRIPTION">
+				<field name="logs_attacks" type="radio" default="1" label="PLG_SECURITYCHECK_LOG_ATTACKS_LABEL" description="PLG_SECURITYCHECK_LOG_ATTACKS_DESCRIPTION">
+					<option value="1">PLG_SECURITYCHECK_YES</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="Redirection" label="PLG_SECURITYCHECK_REDIRECTION_LABEL" description="PLG_SECURITYCHECK_REDIRECTION_DESCRIPTION">
+				<field name="redirect_after_attack" type="radio" default="1" label="PLG_SECURITYCHECK_REDIRECT_AFTER_ATTACK_LABEL" description="PLG_SECURITYCHECK_REDIRECT_AFTER_ATTACK_DESCRIPTION">
+					<option value="1">PLG_SECURITYCHECK_YES</option>
+				</field>
+				
+				<field name="redirect_options" type="radio" default="1" label="PLG_SECURITYCHECK_REDIRECT_LABEL" description="PLG_SECURITYCHECK_REDIRECT_DESCRIPTION">
+					<option value="1">PLG_SECURITYCHECK_JOOMLA_PATH_LABEL</option>
+				</field>	
+			</fieldset>
+				
+			<fieldset name="Second" label="PLG_SECURITYCHECK_SECOND_LABEL" description="PLG_SECURITYCHECK_SECOND_DESCRIPTION">
+				<field name="second_level" type="radio" default="1" label="PLG_SECURITYCHECK_SECOND_LEVEL_LABEL" description="PLG_SECURITYCHECK_SECOND_LEVEL_DESCRIPTION">
+					<option value="1">PLG_SECURITYCHECK_YES</option>
+					<option value="0">PLG_SECURITYCHECK_NO</option>
+				</field>
+				
+				<field name="second_level_redirect" type="radio" default="1" label="PLG_SECURITYCHECK_REDIRECT_IF_PATTERN_LABEL" description="PLG_SECURITYCHECK_REDIRECT_IF_PATTERN_DESCRIPTION">
+					<option value="1">PLG_SECURITYCHECK_YES</option>
+				</field>	
+			</fieldset>
+			
+			<fieldset name="Exceptions" label="PLG_SECURITYCHECK_EXCEPTIONS_LABEL" description="PLG_SECURITYCHECK_EXCEPTIONS_DESCRIPTION">
+				<field name="available_components" type="sql" default="10" label="PLG_SECURITYCHECK_AVAILABLE_COMPONENTS_LABEL" query="SELECT extension_id, element FROM #__extensions WHERE (state=0 and extension_id>=10000 and type='component')" key_field="extension_id" value_field="element" />
+				
+				<field name="exclude_exceptions_if_vulnerable" type="radio" default="1" label="PLG_SECURITYCHECKPRO_EXCLUDE_EXCEPTIONS_IF_VULNERABLE_LABEL" description="PLG_SECURITYCHECKPRO_EXCLUDE_EXCEPTIONS_IF_VULNERABLE_DESCRIPTION">
+					<option value="1">PLG_SECURITYCHECK_YES</option>
+					<option value="0">PLG_SECURITYCHECK_NO</option>
+				</field>
+				
+				<field name="spacer11" type="spacer" label="&lt;u&gt;&lt;b&gt;Header/Referer check&lt;/u&gt;&lt;/b&gt;" />
+				
+				<field name="check_header_referer" type="radio" default="1" label="PLG_SECURITYCHECK_CHECK_HEADER_REFERER_LABEL" description="PLG_SECURITYCHECK_CHECK_HEADER_REFERER_DESCRIPTION">
+					<option value="1">PLG_SECURITYCHECK_YES</option>
+					<option value="0">PLG_SECURITYCHECK_NO</option>
+				</field>
+				
+				<field name="spacer12" type="spacer" label="&lt;u&gt;&lt;b&gt;Base 64 check&lt;/u&gt;&lt;/b&gt;" />
+				
+				<field name="check_base_64" type="radio" default="1" label="PLG_SECURITYCHECK_CHECK_BASE64_LABEL" description="PLG_SECURITYCHECK_CHECK_BASE64_DESCRIPTION">
+					<option value="1">PLG_SECURITYCHECK_YES</option>
+					<option value="0">PLG_SECURITYCHECK_NO</option>
+				</field>
+				
+				<field name="spacer4" type="spacer" label="&lt;u&gt;&lt;b&gt;Base 64 check&lt;/u&gt;&lt;/b&gt;" />
+				
+				<field name="base64_exceptions" type="textarea" default="com_hikashop" label="PLG_SECURITYCHECK_BASE64_EXCEPTIONS_LABEL" description="PLG_SECURITYCHECK_BASE64_EXCEPTIONS_DESCRIPTION" rows="5" cols="17" />
+				
+				<field name="spacer5" type="spacer" label="&lt;u&gt;&lt;b&gt;XSS&lt;/u&gt;&lt;/b&gt;" />
+				
+				<field name="strip_tags_exceptions" type="textarea" default="com_jdownloads,com_hikashop" label="PLG_SECURITYCHECK_STRIP_TAGS_EXCEPTIONS_LABEL" description="PLG_SECURITYCHECK_STRIP_TAGS_EXCEPTIONS_DESCRIPTION" rows="5" cols="17" />
+				
+				<field name="spacer6" type="spacer" label="&lt;u&gt;&lt;b&gt;SQL Injection&lt;/u&gt;&lt;/b&gt;" />
+				
+				<field name="duplicate_backslashes_exceptions" type="textarea" default="com_kunena" label="PLG_SECURITYCHECK_DUPLICATE_BACKSLASHES_EXCEPTIONS_LABEL" description="PLG_SECURITYCHECK_DUPLICATE_BACKSLASHES_EXCEPTIONS_DESCRIPTION" rows="5" cols="17" />
+				
+				<field name="line_comments_exceptions" type="textarea" default="com_comprofiler" label="PLG_SECURITYCHECK_LINE_COMMENTS_EXCEPTIONS_LABEL" description="PLG_SECURITYCHECK_LINE_COMMENTS_EXCEPTIONS_DESCRIPTION" rows="5" cols="17" />
+				
+				<field name="sql_pattern_exceptions" type="textarea" default="" label="PLG_SECURITYCHECK_SQL_PATTERN_EXCEPTIONS_LABEL" description="PLG_SECURITYCHECK_SQL_PATTERN_EXCEPTIONS_DESCRIPTION" rows="5" cols="17" />
+				
+				<field name="if_statement_exceptions" type="textarea" default="" label="PLG_SECURITYCHECK_IF_STATEMENT_EXCEPTIONS_LABEL" description="PLG_SECURITYCHECK_IF_STATEMENT_EXCEPTIONS_DESCRIPTION" rows="5" cols="17" />
+				
+				<field name="using_integers_exceptions" type="textarea" default="com_dms,com_comprofiler,com_jce,com_contactenhanced" label="PLG_SECURITYCHECK_USING_INTEGERS_EXCEPTIONS_LABEL" description="PLG_SECURITYCHECK_USING_INTEGERS_EXCEPTIONS_DESCRIPTION" rows="5" cols="17" />
+				
+				<field name="escape_strings_exceptions" type="textarea" default="com_kunena,com_jce" label="PLG_SECURITYCHECK_ESCAPE_STRINGS_EXCEPTIONS_LABEL" description="PLG_SECURITYCHECK_ESCAPE_STRINGS_EXCEPTIONS_DESCRIPTION" rows="5" cols="17" />
+				
+				<field name="spacer7" type="spacer" label="&lt;u&gt;&lt;b&gt;Local File Inclusion&lt;/u&gt;&lt;/b&gt;" />
+				
+				<field name="lfi_exceptions" type="textarea" default="" label="PLG_SECURITYCHECK_LFI_EXCEPTIONS_LABEL" description="PLG_SECURITYCHECK_LFI_EXCEPTIONS_DESCRIPTION" rows="5" cols="17" />
+				
+				<field name="spacer8" type="spacer" label="&lt;u&gt;&lt;b&gt;Second level&lt;/u&gt;&lt;/b&gt;" />
+				
+				<field name="second_level_exceptions" type="textarea" default="" label="PLG_SECURITYCHECK_SECOND_LEVEL_EXCEPTIONS_LABEL" description="PLG_SECURITYCHECK_SECOND_LEVEL_EXCEPTIONS_DESCRIPTION" rows="5" cols="17" />
+			</fieldset>
+			
+			<fieldset name="session_protection" label="PLG_SECURITYCHECK_SESSION_PROTECTION_LABEL" description="PLG_SECURITYCHECK_SESSION_PROTECTION_DESCRIPTION">
+			
+				<field name="session_protection_active" type="radio" default="1" label="PLG_SECURITYCHECK_SESSION_PROTECTION_ACTIVE_LABEL" description="PLG_SECURITYCHECK_SESSION_PROTECTION_ACTIVE_DESCRIPTION">
+					<option value="1">PLG_SECURITYCHECK_YES</option>
+					<option value="0">PLG_SECURITYCHECK_NO</option>
+				</field>		
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.3" type="plugin" group="contact" method="upgrade">
+    <name>plg_contact_sms_notification</name>
+    <author>Mobiweb</author>
+    <creationDate>February 2015</creationDate>
+    <license>GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html</license>
+    <version>1.0.3</version>
+    <description>PLG_CONTACT_SMS_NOTIFICATION_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="isms">isms.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="language/en-GB">
+        <language tag="en-GB">en-GB.plg_contact_isms.ini</language>
+        <language tag="en-GB">en-GB.plg_contact_isms.sys.ini</language>
+    </languages>
+    <config></config>
+</extension>

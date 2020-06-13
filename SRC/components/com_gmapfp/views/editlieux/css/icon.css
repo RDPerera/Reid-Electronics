@@ -1,0 +1,19 @@
+/** toolbar icons **/
+.icon-32-publish 		{ background-image: url(../toolbar/icon-32-publish.png); }
+.icon-32-unpublish 		{ background-image: url(../toolbar/icon-32-unpublish.png);}
+.icon-32-copy 			{ background-image: url(../toolbar/icon-32-copy.png); }
+.icon-32-delete 		{ background-image: url(../toolbar/icon-32-delete.png); }
+.icon-32-edit 			{ background-image: url(../toolbar/icon-32-edit.png); }
+.icon-32-new 			{ background-image: url(../toolbar/icon-32-new.png); }
+
+.icon-32-save 			{ background-image: url(../toolbar/icon-32-save.png); }
+.icon-32-apply 			{ background-image: url(../toolbar/icon-32-apply.png); }
+.icon-32-cancel 		{ background-image: url(../toolbar/icon-32-cancel.png); }
+
+.icon-32-forward 		{ background-image: url(../toolbar/icon-32-forward.png); }
+.icon-32-back 			{ background-image: url(../toolbar/icon-32-back.png); }
+
+.jgrid span.downarrow 	{background-image: url(../toolbar/downarrow.png); }
+.jgrid span.uparrow 	{background-image: url(../toolbar/uparrow.png); }
+
+.icon-32-upload 		{ background-image: url(../toolbar/icon-32-upload.png); }

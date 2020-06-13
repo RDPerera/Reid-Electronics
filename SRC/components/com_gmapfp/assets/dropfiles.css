@@ -1,0 +1,25 @@
+#dropzonefp {
+	width: 100%;
+	min-height: 100px;
+	border: 3px dashed #BBBBBB;
+	line-height:50px;
+	text-align: center;
+}
+.audio_box {
+	width: 300px;
+	display: inline-block;
+    padding: 10px;
+}
+.audio_info {
+	cursor: help;
+}
+.table-info .titre {
+	font-weight: bold;
+}
+#dropzonefp  .drop_info {
+	background-color: #5dacf0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.4em;
+	padding: 10px;
+}

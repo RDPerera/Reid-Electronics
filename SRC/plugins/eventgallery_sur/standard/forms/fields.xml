@@ -1,0 +1,21 @@
+
+            <fieldset name="surcharge" label="COM_EVENTGALLERY_PLUGINS_SURCHARGE_STANDARD_LABEL" description="COM_EVENTGALLERY_PLUGINS_SURCHARGE_STANDARD_DESC">
+            	<field name="surcharge_standard_type" type="radio" class="btn-group btn-group-yesno" default="money" label="COM_EVENTGALLERY_PLUGINS_SURCHARGE_STANDARD_TYPE_LABEL" description="COM_EVENTGALLERY_PLUGINS_SURCHARGE_STANDARD_TYPE_DESC">
+					<option value="money">COM_EVENTGALLERY_PLUGINS_SURCHARGE_STANDARD_TYPE_MONEY</option>
+					<option value="itemcount">COM_EVENTGALLERY_PLUGINS_SURCHARGE_STANDARD_TYPE_ITEMCOUNT</option>
+				</field>
+                <field name="surcharge_standard_min"
+                   type="text"
+                   label="COM_EVENTGALLERY_PLUGINS_SURCHARGE_STANDARD_MIN_LABEL"
+                   description="COM_EVENTGALLERY_PLUGINS_SURCHARGE_STANDARD_MIN_DESC"
+                   required="false"
+                   class="input-xlarge"
+                />
+                <field name="surcharge_standard_max"
+                   type="text"
+                   label="COM_EVENTGALLERY_PLUGINS_SURCHARGE_STANDARD_MAX_LABEL"
+                   description="COM_EVENTGALLERY_PLUGINS_SURCHARGE_STANDARD_MAX_DESC"
+                   required="false"
+                   class="input-xlarge"
+                />
+            </fieldset>

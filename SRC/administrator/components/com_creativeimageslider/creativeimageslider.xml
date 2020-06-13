@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>COM_CREATIVEIMAGESLIDER</name>
+    <creationDate>Februrary 2014</creationDate>
+    <author>Creative Solutions Company</author>
+    <copyright>Copyright (©) 2012-2020 Creative Solutions company. All rights reserved.</copyright>
+    <authorEmail>info@creative-solutions.net</authorEmail>
+    <authorUrl>http://creative-solutions.net</authorUrl>
+    <version>3.1.1</version>
+    <license>GNU/GPL</license>
+    <description>COM_CREATIVEIMAGESLIDER_DESCRIPTION</description>
+
+  	<scriptfile>scriptfile.php</scriptfile>
+
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install/sql/install.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">install/sql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+	
+    <!-- user part -->
+    <files folder="site">
+        <filename>controller.php</filename>
+        <filename>index.html</filename>
+        <filename>router.php</filename>
+        <filename>creativeimageslider.php</filename>
+        <folder>models</folder>
+        <folder>helpers</folder>
+        <folder>views</folder>
+        <folder>assets</folder>
+    </files>
+    
+    <languages folder="site">
+			<language tag="en-GB">language/en-GB/en-GB.com_creativeimageslider.ini</language>
+	</languages>
+
+    <!-- administration part -->
+    <administration>
+	    <menu img="components/com_creativeimageslider/assets/images/project_16.png">COM_CREATIVEIMAGESLIDER_MENU</menu>
+	    <submenu>
+			<menu img="components/com_creativeimageslider/assets/images/poll_16.png" link="option=com_creativeimageslider&amp;view=creativesliders">COM_CREATIVEIMAGESLIDER_SUBMENU_SLIDERS</menu>
+			<menu img="components/com_creativeimageslider/assets/images/answer_16.png" link="option=com_creativeimageslider&amp;view=creativeimages">COM_CREATIVEIMAGESLIDER_SUBMENU_IMAGES</menu>
+		</submenu>
+	    <files folder="admin">
+	        <filename>controller.php</filename>
+	        <filename>creativeimageslider.php</filename>
+	        <filename>config.xml</filename>
+	        <filename>index.html</filename>
+			
+	        <folder>install</folder>
+	        <folder>assets</folder>
+	        <folder>helpers</folder>
+	        <folder>models</folder>
+	        <folder>tables</folder>
+	        <folder>views</folder>
+	        <folder>controllers</folder>
+	        <folder>elements</folder>
+	        <folder>fields</folder>
+	    </files>
+	    
+	   	<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_creativeimageslider.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_creativeimageslider.sys.ini</language>
+		</languages>
+    </administration>
+
+    <updateservers>
+		<server type="extension" priority="2" name="CreativeImageSlider"><![CDATA[http://creative-solutions.net/jupdate.php?product=creativeimageslider]]></server>
+	</updateservers>
+</extension>

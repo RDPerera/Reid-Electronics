@@ -1,0 +1,1 @@
+ALTER TABLE `#__eventgallery_emailtemplate` MODIFY subject TEXT;

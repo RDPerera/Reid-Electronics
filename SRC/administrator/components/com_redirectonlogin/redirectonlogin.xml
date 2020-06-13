@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6" method="upgrade">
+    <name>COM_REDIRECTONLOGIN</name>
+    <creationDate>december 2018</creationDate>
+    <author>Carsten Engel</author>
+    <copyright>Copyright 2008 - 2019 (C) Carsten Engel - Engelweb. All rights reserved.</copyright>
+    <authorEmail></authorEmail>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorUrl>www.pages-and-items.com</authorUrl>
+    <version>4.0.6</version>
+     <description>Redirects users on login / logout / on opening site. Per user / usergroup or accesslevel / all users. Frontend and backend.</description>		
+		    
+    <administration>  
+		<menu img="components/com_redirectonlogin/images/redirectonlogin_icon.png">COM_REDIRECTONLOGIN</menu> 	
+		<submenu>			
+			<menu link="option=com_redirectonlogin&amp;view=configuration" view="configuration" img="components/com_redirectonlogin/images/redirectonlogin_configuration.png"
+				alt="Configuration">COM_REDIRECTONLOGIN_CONFIGURATION</menu>
+			<menu link="option=com_redirectonlogin&amp;view=allusers" view="allusers" img="components/com_redirectonlogin/images/redirectonlogin_users.png" 
+				alt="Users">COM_REDIRECTONLOGIN_ALLUSERS</menu>
+			<menu link="option=com_redirectonlogin&amp;view=usergroups" view="usergroups" img="components/com_redirectonlogin/images/redirectonlogin_usergroups.png"
+				alt="Usergroups">COM_REDIRECTONLOGIN_USERGROUPS</menu>
+			<menu link="option=com_redirectonlogin&amp;view=accesslevels" view="accesslevels" img="components/com_redirectonlogin/images/redirectonlogin_levels.png"
+				alt="Accesslevels">COM_REDIRECTONLOGIN_ACCESSLEVELS</menu>
+			<menu link="option=com_redirectonlogin&amp;view=users" view="users" img="components/com_redirectonlogin/images/redirectonlogin_users.png" 
+				alt="Users">COM_REDIRECTONLOGIN_USERS</menu>
+			<menu link="option=com_redirectonlogin&amp;view=dynamicredirects" view="dynamicredirects" img="components/com_redirectonlogin/images/redirectonlogin_dynamic.png" 
+				alt="Dynamicredirects">COM_REDIRECTONLOGIN_DYNAMIC_REDIRECTS</menu>	
+			<menu link="option=com_redirectonlogin&amp;view=support" view="support" img="components/com_redirectonlogin/images/redirectonlogin_support.png"
+				alt="Users">COM_REDIRECTONLOGIN_SUPPORT</menu>					
+		</submenu>	   
+		<languages folder="admin">		
+			<language tag="af-ZA">language/af-ZA.com_redirectonlogin.ini</language>
+			<language tag="af-ZA">language/af-ZA.com_redirectonlogin.sys.ini</language>
+			<language tag="ar-EG">language/ar-EG.com_redirectonlogin.ini</language>
+			<language tag="ar-EG">language/ar-EG.com_redirectonlogin.sys.ini</language>
+			<language tag="be-BE">language/be-BE.com_redirectonlogin.ini</language>
+			<language tag="be-BE">language/be-BE.com_redirectonlogin.sys.ini</language>
+			<language tag="bg-BG">language/bg-BG.com_redirectonlogin.ini</language>
+			<language tag="bg-BG">language/bg-BG.com_redirectonlogin.sys.ini</language>
+			<language tag="ca-ES">language/ca-ES.com_redirectonlogin.ini</language>
+			<language tag="ca-ES">language/ca-ES.com_redirectonlogin.sys.ini</language>
+			<language tag="cs-CZ">language/cs-CZ.com_redirectonlogin.ini</language>
+			<language tag="cs-CZ">language/cs-CZ.com_redirectonlogin.sys.ini</language>
+			<language tag="cy-GB">language/cy-GB.com_redirectonlogin.ini</language>
+			<language tag="cy-GB">language/cy-GB.com_redirectonlogin.sys.ini</language>
+			<language tag="da-DK">language/da-DK.com_redirectonlogin.ini</language>
+			<language tag="da-DK">language/da-DK.com_redirectonlogin.sys.ini</language>
+			<language tag="de-DE">language/de-DE.com_redirectonlogin.ini</language>
+			<language tag="de-DE">language/de-DE.com_redirectonlogin.sys.ini</language>
+			<language tag="el-GR">language/el-GR.com_redirectonlogin.ini</language>
+			<language tag="el-GR">language/el-GR.com_redirectonlogin.sys.ini</language>
+			<language tag="en-GB">language/en-GB.com_redirectonlogin.ini</language>
+			<language tag="en-GB">language/en-GB.com_redirectonlogin.sys.ini</language>
+			<language tag="es-ES">language/es-ES.com_redirectonlogin.ini</language>
+			<language tag="es-ES">language/es-ES.com_redirectonlogin.sys.ini</language>
+			<language tag="et-EE">language/et-EE.com_redirectonlogin.ini</language>
+			<language tag="et-EE">language/et-EE.com_redirectonlogin.sys.ini</language>
+			<language tag="fa-IR">language/fa-IR.com_redirectonlogin.ini</language>
+			<language tag="fa-IR">language/fa-IR.com_redirectonlogin.sys.ini</language>
+			<language tag="fi-FI">language/fi-FI.com_redirectonlogin.ini</language>
+			<language tag="fi-FI">language/fi-FI.com_redirectonlogin.sys.ini</language>
+			<language tag="fr-FR">language/fr-FR.com_redirectonlogin.ini</language>
+			<language tag="fr-FR">language/fr-FR.com_redirectonlogin.sys.ini</language>
+			<language tag="ga-IE">language/ga-IE.com_redirectonlogin.ini</language>
+			<language tag="ga-IE">language/ga-IE.com_redirectonlogin.sys.ini</language>
+			<language tag="gl-ES">language/gl-ES.com_redirectonlogin.ini</language>
+			<language tag="gl-ES">language/gl-ES.com_redirectonlogin.sys.ini</language>
+			<language tag="he-IL">language/he-IL.com_redirectonlogin.ini</language>
+			<language tag="he-IL">language/he-IL.com_redirectonlogin.sys.ini</language>
+			<language tag="hi-IN">language/hi-IN.com_redirectonlogin.ini</language>
+			<language tag="hi-IN">language/hi-IN.com_redirectonlogin.sys.ini</language>
+			<language tag="hr-HR">language/hr-HR.com_redirectonlogin.ini</language>
+			<language tag="hr-HR">language/hr-HR.com_redirectonlogin.sys.ini</language>
+			<language tag="ht-NG">language/ht-NG.com_redirectonlogin.ini</language>
+			<language tag="ht-NG">language/ht-NG.com_redirectonlogin.sys.ini</language>
+			<language tag="hu-HU">language/hu-HU.com_redirectonlogin.ini</language>
+			<language tag="hu-HU">language/hu-HU.com_redirectonlogin.sys.ini</language>
+			<language tag="id-ID">language/id-ID.com_redirectonlogin.ini</language>
+			<language tag="id-ID">language/id-ID.com_redirectonlogin.sys.ini</language>
+			<language tag="is-IS">language/is-IS.com_redirectonlogin.ini</language>
+			<language tag="is-IS">language/is-IS.com_redirectonlogin.sys.ini</language>
+			<language tag="it-IT">language/it-IT.com_redirectonlogin.ini</language>
+			<language tag="it-IT">language/it-IT.com_redirectonlogin.sys.ini</language>
+			<language tag="ja-JP">language/ja-JP.com_redirectonlogin.ini</language>
+			<language tag="ja-JP">language/ja-JP.com_redirectonlogin.sys.ini</language>
+			<language tag="ko-KR">language/ko-KR.com_redirectonlogin.ini</language>
+			<language tag="ko-KR">language/ko-KR.com_redirectonlogin.sys.ini</language>
+			<language tag="lt-LT">language/lt-LT.com_redirectonlogin.ini</language>
+			<language tag="lt-LT">language/lt-LT.com_redirectonlogin.sys.ini</language>
+			<language tag="lv-LV">language/lv-LV.com_redirectonlogin.ini</language>
+			<language tag="lv-LV">language/lv-LV.com_redirectonlogin.sys.ini</language>
+			<language tag="mk-MK">language/mk-MK.com_redirectonlogin.ini</language>
+			<language tag="mk-MK">language/mk-MK.com_redirectonlogin.sys.ini</language>
+			<language tag="ms-MY">language/ms-MY.com_redirectonlogin.ini</language>
+			<language tag="ms-MY">language/ms-MY.com_redirectonlogin.sys.ini</language>
+			<language tag="mt-MT">language/mt-MT.com_redirectonlogin.ini</language>
+			<language tag="mt-MT">language/mt-MT.com_redirectonlogin.sys.ini</language>
+			<language tag="nl-NL">language/nl-NL.com_redirectonlogin.ini</language>
+			<language tag="nl-NL">language/nl-NL.com_redirectonlogin.sys.ini</language>
+			<language tag="no-NO">language/no-NO.com_redirectonlogin.ini</language>
+			<language tag="no-NO">language/no-NO.com_redirectonlogin.sys.ini</language>
+			<language tag="pl-PL">language/pl-PL.com_redirectonlogin.ini</language>
+			<language tag="pl-PL">language/pl-PL.com_redirectonlogin.sys.ini</language>
+			<language tag="pt-PT">language/pt-PT.com_redirectonlogin.ini</language>
+			<language tag="pt-PT">language/pt-PT.com_redirectonlogin.sys.ini</language>
+			<language tag="ro-RO">language/ro-RO.com_redirectonlogin.ini</language>
+			<language tag="ro-RO">language/ro-RO.com_redirectonlogin.sys.ini</language>
+			<language tag="ru-RU">language/ru-RU.com_redirectonlogin.ini</language>
+			<language tag="ru-RU">language/ru-RU.com_redirectonlogin.sys.ini</language>
+			<language tag="sk-SK">language/sk-SK.com_redirectonlogin.ini</language>
+			<language tag="sk-SK">language/sk-SK.com_redirectonlogin.sys.ini</language>
+			<language tag="sl-SI">language/sl-SI.com_redirectonlogin.ini</language>
+			<language tag="sl-SI">language/sl-SI.com_redirectonlogin.sys.ini</language>
+			<language tag="sq-AL">language/sq-AL.com_redirectonlogin.ini</language>
+			<language tag="sq-AL">language/sq-AL.com_redirectonlogin.sys.ini</language>
+			<language tag="sr-RS">language/sr-RS.com_redirectonlogin.ini</language>
+			<language tag="sr-RS">language/sr-RS.com_redirectonlogin.sys.ini</language>
+			<language tag="sv-SE">language/sv-SE.com_redirectonlogin.ini</language>
+			<language tag="sv-SE">language/sv-SE.com_redirectonlogin.sys.ini</language>
+			<language tag="sw-TZ">language/sw-TZ.com_redirectonlogin.ini</language>
+			<language tag="sw-TZ">language/sw-TZ.com_redirectonlogin.sys.ini</language>
+			<language tag="th-TH">language/th-TH.com_redirectonlogin.ini</language>
+			<language tag="th-TH">language/th-TH.com_redirectonlogin.sys.ini</language>
+			<language tag="tl-PH">language/tl-PH.com_redirectonlogin.ini</language>
+			<language tag="tl-PH">language/tl-PH.com_redirectonlogin.sys.ini</language>
+			<language tag="tr-TR">language/tr-TR.com_redirectonlogin.ini</language>
+			<language tag="tr-TR">language/tr-TR.com_redirectonlogin.sys.ini</language>
+			<language tag="uk-UA">language/uk-UA.com_redirectonlogin.ini</language>
+			<language tag="uk-UA">language/uk-UA.com_redirectonlogin.sys.ini</language>
+			<language tag="vi-VN">language/vi-VN.com_redirectonlogin.ini</language>
+			<language tag="vi-VN">language/vi-VN.com_redirectonlogin.sys.ini</language>
+			<language tag="yi-IL">language/yi-IL.com_redirectonlogin.ini</language>
+			<language tag="yi-IL">language/yi-IL.com_redirectonlogin.sys.ini</language>
+			<language tag="zh-CN">language/zh-CN.com_redirectonlogin.ini</language>
+			<language tag="zh-CN">language/zh-CN.com_redirectonlogin.sys.ini</language>
+			<language tag="zh-TW">language/zh-TW.com_redirectonlogin.ini</language>
+			<language tag="zh-TW">language/zh-TW.com_redirectonlogin.sys.ini</language>
+		</languages> 		
+		<files folder="admin">	
+				
+			<folder>css</folder>
+			<folder>device_detection</folder>
+			<folder>edit_area</folder>
+			<folder>geoip</folder>
+			<folder>images</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>	
+			<folder>plugin_system</folder>
+			<folder>plugin_user</folder>	
+			<folder>views</folder>
+			
+			<filename>config.xml</filename>			
+			<filename>redirectonlogin.php</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>						
+									
+		</files>	
+		
+	</administration>	
+	<languages folder="site">		
+		<language tag="af-ZA">language/af-ZA.com_redirectonlogin.ini</language>
+		<language tag="ar-EG">language/ar-EG.com_redirectonlogin.ini</language>
+		<language tag="be-BE">language/be-BE.com_redirectonlogin.ini</language>
+		<language tag="bg-BG">language/bg-BG.com_redirectonlogin.ini</language>
+		<language tag="ca-ES">language/ca-ES.com_redirectonlogin.ini</language>
+		<language tag="cs-CZ">language/cs-CZ.com_redirectonlogin.ini</language>
+		<language tag="cy-GB">language/cy-GB.com_redirectonlogin.ini</language>
+		<language tag="da-DK">language/da-DK.com_redirectonlogin.ini</language>
+		<language tag="de-DE">language/de-DE.com_redirectonlogin.ini</language>
+		<language tag="el-GR">language/el-GR.com_redirectonlogin.ini</language>
+		<language tag="en-GB">language/en-GB.com_redirectonlogin.ini</language>
+		<language tag="es-ES">language/es-ES.com_redirectonlogin.ini</language>
+		<language tag="et-EE">language/et-EE.com_redirectonlogin.ini</language>
+		<language tag="fa-IR">language/fa-IR.com_redirectonlogin.ini</language>
+		<language tag="fi-FI">language/fi-FI.com_redirectonlogin.ini</language>
+		<language tag="fr-FR">language/fr-FR.com_redirectonlogin.ini</language>
+		<language tag="ga-IE">language/ga-IE.com_redirectonlogin.ini</language>
+		<language tag="gl-ES">language/gl-ES.com_redirectonlogin.ini</language>
+		<language tag="he-IL">language/he-IL.com_redirectonlogin.ini</language>
+		<language tag="hi-IN">language/hi-IN.com_redirectonlogin.ini</language>
+		<language tag="hr-HR">language/hr-HR.com_redirectonlogin.ini</language>
+		<language tag="ht-NG">language/ht-NG.com_redirectonlogin.ini</language>
+		<language tag="hu-HU">language/hu-HU.com_redirectonlogin.ini</language>
+		<language tag="id-ID">language/id-ID.com_redirectonlogin.ini</language>
+		<language tag="is-IS">language/is-IS.com_redirectonlogin.ini</language>
+		<language tag="it-IT">language/it-IT.com_redirectonlogin.ini</language>
+		<language tag="ja-JP">language/ja-JP.com_redirectonlogin.ini</language>
+		<language tag="ko-KR">language/ko-KR.com_redirectonlogin.ini</language>
+		<language tag="lt-LT">language/lt-LT.com_redirectonlogin.ini</language>
+		<language tag="lv-LV">language/lv-LV.com_redirectonlogin.ini</language>
+		<language tag="mk-MK">language/mk-MK.com_redirectonlogin.ini</language>
+		<language tag="ms-MY">language/ms-MY.com_redirectonlogin.ini</language>
+		<language tag="mt-MT">language/mt-MT.com_redirectonlogin.ini</language>
+		<language tag="nl-NL">language/nl-NL.com_redirectonlogin.ini</language>
+		<language tag="no-NO">language/no-NO.com_redirectonlogin.ini</language>
+		<language tag="pl-PL">language/pl-PL.com_redirectonlogin.ini</language>
+		<language tag="pt-BR">language/pt-BR.com_redirectonlogin.ini</language>
+		<language tag="pt-PT">language/pt-PT.com_redirectonlogin.ini</language>
+		<language tag="ro-RO">language/ro-RO.com_redirectonlogin.ini</language>
+		<language tag="ru-RU">language/ru-RU.com_redirectonlogin.ini</language>
+		<language tag="sk-SK">language/sk-SK.com_redirectonlogin.ini</language>
+		<language tag="sl-SI">language/sl-SI.com_redirectonlogin.ini</language>
+		<language tag="sq-AL">language/sq-AL.com_redirectonlogin.ini</language>
+		<language tag="sr-RS">language/sr-RS.com_redirectonlogin.ini</language>
+		<language tag="sv-SE">language/sv-SE.com_redirectonlogin.ini</language>
+		<language tag="sw-TZ">language/sw-TZ.com_redirectonlogin.ini</language>
+		<language tag="th-TH">language/th-TH.com_redirectonlogin.ini</language>
+		<language tag="tl-PH">language/tl-PH.com_redirectonlogin.ini</language>
+		<language tag="tr-TR">language/tr-TR.com_redirectonlogin.ini</language>
+		<language tag="uk-UA">language/uk-UA.com_redirectonlogin.ini</language>
+		<language tag="vi-VN">language/vi-VN.com_redirectonlogin.ini</language>
+		<language tag="yi-IL">language/yi-IL.com_redirectonlogin.ini</language>
+		<language tag="zh-CN">language/zh-CN.com_redirectonlogin.ini</language>
+		<language tag="zh-TW">language/zh-TW.com_redirectonlogin.ini</language>
+	</languages> 
+	<files folder="site">
+		<folder>params</folder>
+		<folder>views</folder>		
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>redirectonlogin.php</filename>
+		<filename>router.php</filename>			
+	</files>
+	
+	<scriptfile>install.script.php</scriptfile>	
+	
+	<updateservers>
+		<server type="extension" priority="1" name="com_redirectonlogin"><![CDATA[http://www.pages-and-items.com/updateserver.php?ext=redirectonlogin&]]></server>
+	</updateservers>
+		
+</extension>

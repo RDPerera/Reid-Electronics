@@ -1,0 +1,146 @@
+<?php
+
+namespace Nextend\SmartSlider3\Application\Frontend\Slider;
+
+use Nextend\Framework\Asset\AssetManager;
+use Nextend\Framework\WordPress\AssetInjector;
+use Nextend\SmartSlider3\Settings;
+
+/**
+ * @var ViewIframe $this
+ */
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <title>Slider</title>
+    <style>
+        html, body {
+            overflow: hidden;
+        }
+
+        body * {
+            background-attachment: scroll !important;
+        }
+    </style>
+    <?php
+    /**
+     * In page builder -> editors, we must force sliders to be visible on every device.
+     */
+    if (isset($_GET['iseditor']) && $_GET['iseditor']):
+        ?>
+        <script>
+            window.ssOverrideHideOn = {
+                desktopLandscape: 0,
+                desktopPortrait: 0,
+                tabletLandscape: 0,
+                tabletPortrait: 0,
+                mobileLandscape: 0,
+                mobilePortrait: 0
+            };
+        </script>
+    <?php
+    endif;
+    ?>
+
+    <?php
+
+
+    $handlers = ob_list_handlers();
+    if (!in_array(AssetInjector::class . '::output_callback', $handlers)) {
+        if (class_exists('\\Nextend\\Framework\\Asset\\AssetManager', false)) {
+            echo AssetManager::getCSS();
+            echo AssetManager::getJs();
+        }
+    }
+
+    $externals = Settings::get('external-css-files');
+    if (!empty($externals)) {
+        $externals = explode("\n", $externals);
+        foreach ($externals as $external) {
+            echo "<link rel='stylesheet' href='" . $external . "' type='text/css' media='all' />";
+        }
+    }
+    ?>
+</head>
+<body>
+<?php
+echo $this->getSliderHTML();
+?>
+<script>
+    var tmpChange,
+        notifyParentAboutChange = function (e, responsive) {
+            tmpChange = [e, responsive];
+        };
+
+    function broadCastReady() {
+        parent.postMessage({key: 'ready'}, "*");
+    }
+
+    N2R('windowLoad', function ($) {
+        var $slider = $('.n2-ss-slider').on({
+            SliderResize: function (e, ratios, responsive) {
+                notifyParentAboutChange(e, responsive);
+            },
+            Show: function (e) {
+                notifyParentAboutChange(e, $slider.data('ss').responsive);
+            }
+        });
+
+        var slider = $slider.data('ss');
+        // If the slider is already ready, then SliderResize might not happen to adjust the iframe size in the parent
+        if (slider && slider.stages.resolved('ResizeFirst')) {
+            notifyParentAboutChange(null, slider.responsive);
+        }
+
+        var interval = setInterval(broadCastReady, 40);
+
+        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+        window[eventMethod](eventMethod == "attachEvent" ? "onmessage" : "message", function (e) {
+            var data = e[e.message ? "message" : "data"];
+            switch (data["key"]) {
+                case "ackReady":
+                    window.n2ClientHeight = data.clientHeight;
+                    clearInterval(interval);
+                    notifyParentAboutChange = function (e, responsive) {
+                        parent.postMessage({
+                            key: 'resize',
+                            width: $('body').width(),
+                            height: $('body').height(),
+                            forceFull: responsive.parameters.forceFull,
+                            fullPage: responsive.parameters.type === 'fullpage',
+                            focus: responsive.parameters.focus
+                        }, "*");
+                    };
+                    if (typeof tmpChange !== 'undefined') {
+                        notifyParentAboutChange.apply(this, tmpChange);
+                    }
+                    break;
+                case 'update':
+                    window.n2ClientHeight = data.clientHeight;
+                    $(window).trigger('resize');
+                    break;
+            }
+        });
+
+        n2const.setLocation = function (l) {
+            parent.postMessage({
+                key: 'setLocation',
+                location: l
+            }, "*");
+        };
+
+        $('a').each(function () {
+            if ($(this).attr('target') !== '_blank') {
+                $(this).attr('target', '_parent');
+            }
+        });
+    });
+</script>
+</body>
+</html>
+
+

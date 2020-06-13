@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_REDIRECTONLOGIN_LOGOUT">
+		<message><![CDATA[COM_REDIRECTONLOGIN_FORCE_LOGOUT]]></message>
+	</layout>
+</metadata>

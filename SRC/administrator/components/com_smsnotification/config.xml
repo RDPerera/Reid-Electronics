@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset
+              name="account"
+              label="COM_ISMS_CONFIG_ACCOUNT_SETTINGS_LABEL">
+        <field
+               name="isms_username"
+               type="text"
+               default=""
+               label="COM_ISMS_CONFIG_FIELD_USERNAME_LABEL"
+               size="50" />
+        
+        <field
+               name="isms_password"
+               type="password"
+               default=""
+               label="COM_ISMS_CONFIG_FIELD_PASSWORD_LABEL"
+               size="50" />
+        
+        <field
+               name="isms_message_type"
+               type="radio"
+               default="1"
+               label="COM_SMSNOTIFICATION_CONFIG_FIELD_MESSAGE_TYPE_LABEL">
+            <option
+                    value="1">COM_SMSNOTIFICATION_CONFIG_FIELD_MESSAGE_TYPE_NORMAL</option>
+            <option
+                    value="2">COM_SMSNOTIFICATION_CONFIG_FIELD_MESSAGE_TYPE_UNICODE</option>
+        </field>
+        
+        <field
+               name="admin_phone_number"
+               type="tel"
+               default=""
+               label="COM_ISMS_CONFIG_FIELD_ADMIN_PHONE_NUMBER_LABEL"
+               size="50"/>
+        
+        <field
+               name="admin_phone_number_note"
+               type="note"
+               class="alert alert-info"
+               description="COM_ISMS_CONFIG_FIELD_ADMIN_PHONE_NUMBER_DESCRIPTION" />
+    </fieldset>
+    
+    <fieldset
+              name="email_alert"
+              label="COM_ISMS_CONFIG_EMAIL_ALERT_SETTINGS_LABEL">
+        <field
+               name="email_alert_enabled"
+               type="radio"
+               default="true"
+               label="COM_ISMS_CONFIG_FIELD_EMAIL_ALERT_RADIO_LABEL" >
+            <option value="false">COM_ISMS_CONFIG_FIELD_EMAIL_ALERT_RADIO_NO</option>
+            <option value="true">COM_ISMS_CONFIG_FIELD_EMAIL_ALERT_RADIO_YES</option>
+        </field>
+        
+        <field
+               name="email_alert_parameters"
+               type="checkboxes"
+               default="name,email,subject,message"
+               label="COM_ISMS_CONFIG_FIELD_EMAIL_ALERT_PARAMETERS_LABEL">
+            <option value="name">COM_ISMS_CONFIG_FIELD_EMAIL_ALERT_PARAMETERS_NAME</option>
+            <option value="email">COM_ISMS_CONFIG_FIELD_EMAIL_ALERT_PARAMETERS_EMAIL</option>
+            <option value="subject">COM_ISMS_CONFIG_FIELD_EMAIL_ALERT_PARAMETERS_SUBJECT</option>
+            <option value="message">COM_ISMS_CONFIG_FIELD_EMAIL_ALERT_PARAMETERS_MESSAGE</option>
+        </field>   
+        
+        <field
+               name="email_alert_sms_count"
+               type="integer"
+               default="1"
+               label="COM_ISMS_CONFIG_FIELD_EMAIL_ALERT_SMS_COUNT_LABEL"
+               first="0"
+               last="10"
+               step="1"/>
+    </fieldset>
+    
+    <fieldset
+              name="register_alert"
+              label="COM_ISMS_CONFIG_REGISTER_ALERT_SETTINGS_LABEL">
+        <field
+               name="register_alert_enabled"
+               type="radio"
+               default="true"
+               label="COM_ISMS_CONFIG_FIELD_REGISTER_ALERT_RADIO_LABEL" >
+            <option value="false">COM_ISMS_CONFIG_FIELD_REGISTER_ALERT_RADIO_NO</option>
+            <option value="true">COM_ISMS_CONFIG_FIELD_REGISTER_ALERT_RADIO_YES</option>
+        </field>
+        
+        <field
+               name="register_alert_parameters"
+               type="checkboxes"
+               default="name,username,email"
+               label="COM_ISMS_CONFIG_FIELD_REGISTER_ALERT_PARAMETERS_LABEL">
+            <option value="name">COM_ISMS_CONFIG_FIELD_REGISTER_ALERT_PARAMETERS_NAME</option>
+            <option value="username">COM_ISMS_CONFIG_FIELD_REGISTER_ALERT_PARAMETERS_USERNAME</option>
+            <option value="email">COM_ISMS_CONFIG_FIELD_REGISTER_ALERT_PARAMETERS_EMAIL</option>
+        </field>   
+        
+        <field
+               name="register_alert_sms_count"
+               type="integer"
+               default="1"
+               label="COM_ISMS_CONFIG_FIELD_REGISTER_ALERT_SMS_COUNT_LABEL"
+               first="0"
+               last="10"
+               step="1"/>
+    </fieldset>
+</config>

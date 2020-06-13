@@ -1,0 +1,177 @@
+/* CSS Document */
+
+fieldset.adminform .adminlist label{
+	width: auto;
+	display: inline;
+	float: none;
+	font-size: 100%;
+	clear: auto;
+}
+
+fieldset .pi_table input, fieldset .pi_table textarea, fieldset .pi_table select, fieldset .pi_table img, fieldset .pi_table button{
+	display: inline;
+	float: none;
+	margin: 0;
+}
+
+.adminlist td{
+	vertical-align: top;
+}
+
+.rol_fontsize{	
+	font-size: 13px;
+}
+
+.pi_show_bullets li{
+	list-style: square;
+	margin-left: 20px;
+}
+
+table.pi_table td{
+	padding-bottom: 20px; 
+}
+
+.rol_warning{
+	color: red;
+	padding: 20px 0 10px 0;
+}
+
+.rol_nowrap{
+	white-space: nowrap;
+}
+
+body table.pi_table{	
+	color: #000;
+	background: #fff;
+	font-size: 13px;
+	margin-top: 30px;
+}
+
+/*
+body div#element-box div.m form table.rol_table tr td a{
+	font-size: 1em;
+}
+*/
+
+.tabletop{
+	margin-top: 30px;
+}
+
+fieldset.adminform legend.pi_legend{
+	padding: 0 10px;
+	width: auto;
+	border: 0;	
+}
+
+h2.rol_h2{
+	padding-left: 10px;
+}
+
+div.rol_padleft{
+	padding-left: 10px;
+}
+
+#version_checker_spinner{
+	display: none;
+}
+
+.pi_imgborder{
+	border: 1px solid #ccc;
+}
+
+div#rol_footer{
+	text-align: center;
+	padding-top: 100px;
+	clear: both;
+}
+
+#rol_footer table{
+	width: 600px; 
+	margin: 0 auto; 	
+}
+
+#rol_footer table td{
+	text-align: left;	
+	width: 300px;
+	white-space: nowrap;
+}
+
+#rol_footer table td.text_right{
+	text-align: right;	
+}
+
+#rol_footer table td.five_pix{
+	width: 3px;
+	text-align: center;
+}
+
+.icon-48-rol_icon{
+	background-image: url(../images/icon.png);
+}
+
+div.pagetitle{
+	height: 52px;
+}
+
+table.noimgmargin td img{
+	margin: 0;
+}
+
+table.nopaddingleft tr td{
+	padding-left: 0;
+}
+
+.show_bullets li{
+	list-style: square;
+	margin-left: 20px;
+}
+
+body div.joomla3 .rol_reorder{
+	width: 30px;
+}
+
+body div.joomla3 table.adminlist th{
+	text-align: center;
+}
+
+body div.joomla3 table.pi_table{	
+	margin-top: 0px;
+	background: #F9F9F9;	
+}
+
+body div.joomla3 table.pi_table td {
+	padding-right: 8px;	
+}
+
+div.joomla3 fieldset.adminform legend.pi_legend{
+	padding: 0;
+}
+
+/* icon for j3 */
+.icon-rol_icon{
+	background-image: url('../images/redirectonlogin_icon_j3.png');	
+	margin-bottom: -5px;	
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	width: 25px;
+}
+
+.pi_wrapper_nice{	
+	margin-left: 4px; 
+	background: #fff;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	margin-bottom: 10px;
+}
+
+div.joomla3 fieldset.pi_wrapper_nice{	
+	background: #F9F9F9;
+	padding-left: 20px;	
+	margin-right: 10px;
+}
+

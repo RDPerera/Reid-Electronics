@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.3" type="plugin" group="user" method="upgrade">
+    <name>PLG_USER_SMS_NOTIFICATION</name>
+    <author>Mobiweb</author>
+    <creationDate>April 2015</creationDate>
+    <license>GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html</license>
+    <version>1.0.1</version>
+    <description>PLG_USER_SMS_NOTIFICATION_XML_DESCRIPTION</description>
+    
+    <files>
+        <filename plugin="smsnotificationprofile">smsnotificationprofile.php</filename>
+        <filename>index.html</filename>
+        <folder>profiles</folder>
+    </files>
+    
+    <languages folder="language/en-GB">
+        <language tag="en-GB">en-GB.plg_user_smsnotificationprofile.ini</language>
+        <language tag="en-GB">en-GB.plg_user_smsnotificationprofile.sys.ini</language>
+    </languages>
+    
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="register-require-user" type="spacer"
+                    label="PLG_USER_SMS_NOTIFICATION_FIELD_NAME_REGISTER_REQUIRE_USER"
+                />
+                
+                <field
+                    name="register-require_phone_number" type="list"
+                    description="PLG_USER_SMS_NOTIFICATION_FIELD_PHONE_NUMBER_DESC"
+                    label="PLG_USER_SMS_NOTIFICATION_FIELD_PHONE_NUMBER_LABEL"
+                    default="1">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+                
+                <field
+                    name="profile-require-user" type="spacer"
+                    label="PLG_USER_SMS_NOTIFICATION_FIELD_NAME_PROFILE_REQUIRE_USER"
+                />
+                
+                <field
+                    name="profile-require_phone_number" type="list"
+                    description="PLG_USER_SMS_NOTIFICATION_FIELD_PHONE_NUMBER_DESC"
+                    label="PLG_USER_SMS_NOTIFICATION_FIELD_PHONE_NUMBER_LABEL"
+                    default="1">
+                    <option value="2">JOPTION_REQUIRED</option>
+                    <option value="1">JOPTION_OPTIONAL</option>
+                    <option value="0">DISABLED</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

@@ -1,0 +1,8 @@
+.span12 >.row,
+form >.row{
+	margin-left: 0;
+}
+
+.alert-message {
+	margin-top: 10px;
+}

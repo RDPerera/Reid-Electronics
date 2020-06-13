@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" method="upgrade" client="site">
+    <name>Creative Image Slider</name>
+    <creationDate>Februrary 2014</creationDate>
+    <author>Creative Solutions Company</author>
+    <copyright>Copyright (©) 2012-2020 Creative Solutions company. All rights reserved.</copyright>
+    <authorEmail>info@creative-solutions.net</authorEmail>
+    <authorUrl>http://creative-solutions.net</authorUrl>
+    <version>3.1.1</version>
+    <license>GNU/GPL</license>
+    <description>MOD_CREATIVEIMAGESLIDER_DESCRIPTION</description>
+	<files>
+     	<filename>index.html</filename>
+        <filename module="mod_creativeimageslider">mod_creativeimageslider.php</filename>
+	</files>
+	<languages>
+			<language tag="en-GB">language/en-GB/en-GB.mod_creativeimageslider.ini</language>
+	</languages>
+	<config>
+	   	<fields name="params">
+	   		<fieldset name="basic">
+		  		<field type="sql" name="slider_id" label="MOD_CREATIVEIMAGESLIDER_SELECT_SLIDER_LABEL" default="" description="MOD_CREATIVEIMAGESLIDER_SELECT_SLIDER_DESCRIPTION" query="SELECT id AS value, name AS slider_id FROM #__cis_sliders WHERE `published` = '1'" />
+		  		<field type="text" name="class_suffix" label="MOD_CREATIVEIMAGESLIDER_MODULE_CLASS_SUFFIX_LABEL" default="" description="MOD_CREATIVEIMAGESLIDER_MODULE_CLASS_SUFFIX_DESCRIPTION" />
+	   		</fieldset>
+	   	</fields>
+	</config>
+</extension>

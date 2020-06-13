@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="administrator" method="upgrade">
+	<name>vmadmin</name>
+	<creationDate>29 Oct 2019</creationDate>
+	<author>by the VirtueMart team</author>
+	<authorEmail>max@virtuemart.net</authorEmail>
+	<authorUrl>http://virtuemart.net</authorUrl>
+	<copyright>Copyright (C) 2004 - 2019 Virtuemart Team, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>3.2.0</version>
+	<description>New administration template for VirtueMart for testing and development. Enable as hidden config with newBackendTemplate=1</description>
+
+	<files>
+		<folder>vmadmin</folder>
+	</files>
+
+
+</extension>

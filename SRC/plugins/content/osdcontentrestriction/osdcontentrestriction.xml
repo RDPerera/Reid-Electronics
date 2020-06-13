@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>Content - Open Source Design Content Restriction</name>
+	<author>Pieter-Jan de Vries</author>
+	<authorEmail>info@opensourcedesign.nl</authorEmail>
+	<authorUrl>http://www.opensourcedesign.nl</authorUrl>
+	<copyright>Copyright (c) 2012 Open Source Design</copyright>
+	<license>GNU General Public License version 3, or later</license>
+	<creationDate>2012-04-12</creationDate>
+	<version>3.1.0</version>
+	<description>PLG_CONTENT_OSDCONTENTRESTRICTION_DESCRIPTION</description>
+    
+	<files>
+        <filename plugin="osdcontentrestriction">osdcontentrestriction.php</filename>
+		<filename>index.html</filename>
+        <folder>language</folder>
+	</files>
+</extension>

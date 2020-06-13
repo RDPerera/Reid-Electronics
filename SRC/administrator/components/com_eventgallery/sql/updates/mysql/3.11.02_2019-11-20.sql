@@ -1,0 +1,1 @@
+ALTER TABLE `#__eventgallery_imagetypeset_imagetype_assignment` RENAME `#__eventgallery_imagetypeset_imagetype`;

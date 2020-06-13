@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: default.xml 10880 2008-08-31 17:51:53Z willebil $ -->
+<metadata>
+	<layout title="GMAPFP_VUE_CONTACT">
+		<message>
+			<![CDATA[GMAPFP_VUE_CONTACT_DESC]]>
+		</message>
+	</layout>
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request"
+		 	addfieldpath="/administrator/components/com_gmapfp/models/fields">
+			<field name="id" type="modal_article"
+				description="GMAPFP_SELECT_ARTICLE_DESC"
+				label="GMAPFP_SELECT_ARTICLE"
+				required="true"
+			/>
+		</fieldset>
+	</fields>
+<fields name="params">
+	<fieldset name="advanced" label="GMAPFP_PARAMS_LABEL" >
+			<field name="email_copy" type="radio" default="1" label="GMAPFP_SELECT_EMAIL_COPY" description="GMAPFP_SELECT_EMAIL_COPY_DESC">
+				<option value="0">JHide</option>
+				<option value="1">JShow</option>
+			</field>
+	</fieldset>
+</fields>
+</metadata>

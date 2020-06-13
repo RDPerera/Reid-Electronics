@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="params">
+        <fieldset name="eventgallery" label="COM_CATEGORIES_EVENTGALLERY_FIELDSET_LABEL" description="COM_CATEGORIES_EVENTGALLERY_FIELDSET_DESC" addfieldpath="/administrator/components/com_eventgallery/models/fields">
+			<field name="eventgallery_title"
+                   type="localizabletext"
+                   inputtype="text"
+                   label="PLG_EVENTGALLERY_FIELDS_CATEGORY_TITLE_LABEL"
+                   description="PLG_EVENTGALLERY_FIELDS_CATEGORY_TITLE_DESC"
+                   required="false"
+                   validate=""
+                    />
+                    
+            <field name="eventgallery_description"
+                   type="localizabletext"
+                   inputtype="textarea"
+                   label="PLG_EVENTGALLERY_FIELDS_CATEGORY_DESCRIPTION_LABEL"
+                   description="PLG_EVENTGALLERY_FIELDS_CATEGORY_DESCRIPTION_DESC"
+                   required="false"
+                   validate=""
+                    />
+
+
+        </fieldset>
+	</fields>
+</form>
