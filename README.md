@@ -11,7 +11,7 @@ VirtualMart            https://virtuemart.net/downloads
 
 VirtualMart AIO        https://virtuemart.net/downloads
 
-Civi CRM               https://civicrm.org/
+Clever CRM             https://extensions.joomla.org/extension/clevercrm/
 
 Smart Slider 3         https://smartslider3.com/
 
