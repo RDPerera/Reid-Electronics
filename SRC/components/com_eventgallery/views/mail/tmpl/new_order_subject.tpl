@@ -1,1 +1,0 @@
-Image Order {if isset($data->order->billingaddress)}for {$data->order->billingaddress->firstname} {$data->order->billingaddress->lastname} {else} for {$data->order->firstname|escape} {$data->order->lastname|escape} {/if}with {$data->order->lineitemstotalcount} copies of {$data->order->lineitemscount} images

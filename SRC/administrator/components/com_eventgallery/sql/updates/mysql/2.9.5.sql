@@ -1,1 +1,0 @@
-ALTER TABLE  `#__eventgallery_folder` ADD `attribs` TEXT NOT NULL;

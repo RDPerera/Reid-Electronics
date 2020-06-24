@@ -1,1 +1,0 @@
-ALTER TABLE  `#__eventgallery_file` ADD  `exif` text AFTER  `title`

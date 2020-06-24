@@ -1,1 +1,0 @@
-ALTER TABLE `#__eventgallery_folder` ADD  `googlephotostitle` varchar(250) DEFAULT NULL after `googlephotosaccountid`;

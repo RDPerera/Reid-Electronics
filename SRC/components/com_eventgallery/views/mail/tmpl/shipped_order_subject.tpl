@@ -1,1 +1,0 @@
-Update Shipping Status for your order

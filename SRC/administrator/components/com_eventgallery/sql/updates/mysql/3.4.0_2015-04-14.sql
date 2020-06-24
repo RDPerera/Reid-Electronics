@@ -1,1 +1,0 @@
-ALTER TABLE `#__eventgallery_emailtemplate` ADD `attachments` text AFTER `body`;
