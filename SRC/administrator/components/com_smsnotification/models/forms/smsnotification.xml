@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="smsnotification" addfieldpath="/administrator/components/com_sms_notification/models/fields">
+        <field
+               name="recipient"
+               type="radio"
+               default="phone_number"
+               label="COM_SMSNOTIFICATION_FIELD_RECIPIENT_LABEL">
+            <option value="phone_number">COM_SMSNOTIFICATION_FIELD_RECIPIENT_PHONE_NUMBER</option>
+            <option value="contact">COM_SMSNOTIFICATION_FIELD_RECIPIENT_CONTACT</option>
+            <option value="usergroup">COM_SMSNOTIFICATION_FIELD_RECIPIENT_USERGROUP</option>
+        </field>
+        <field
+               name="to_phone_number"
+               type="tel"
+               label="COM_SMSNOTIFICATION_FIELD_TO_PHONE_NUMBER_LABEL"
+               description="COM_SMSNOTIFICATION_FIELD_TO_PHONE_NUMBER_DESC"
+               default=""
+               showon="recipient:phone_number"/>
+        <field
+               name="to_contact"
+               type="contact"
+               label="COM_SMSNOTIFICATION_FIELD_TO_CONTACTS_LABEL"
+               description="COM_SMSNOTIFICATION_FIELD_TO_CONTACTS_DESC"
+               default=""
+               showon="recipient:contact"/>
+        <field
+               name="to_usergroup"
+               type="usergroup"
+               label="COM_SMSNOTIFICATION_FIELD_TO_USERGROUP_LABEL"
+               description="COM_SMSNOTIFICATION_FIELD_TO_USERGROUP_DESC"
+               default=""
+               showon="recipient:usergroup"/>
+        
+        <field
+               name="message_type"
+               type="radio"
+               default="1"
+               label="COM_SMSNOTIFICATION_CONFIG_FIELD_MESSAGE_TYPE_LABEL">
+            <option value="1">COM_SMSNOTIFICATION_CONFIG_FIELD_MESSAGE_TYPE_NORMAL</option>
+            <option value="2">COM_SMSNOTIFICATION_CONFIG_FIELD_MESSAGE_TYPE_UNICODE</option>
+        </field>
+        
+        <field
+               name="message"
+               type="textarea"
+               label="COM_SMSNOTIFICATION_FIELD_MESSAGE_LABEL"
+               description="COM_SMSNOTIFICATION_FIELD_MESSAGE_DESC"
+               rows="10"
+               cols="5"
+               default=""
+               required="true" />
+    </fieldset>
+</form>

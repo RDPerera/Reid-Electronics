@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="img_name" type="media" label="COM_CREATIVEIMAGESLIDER_IMAGE_LABEL" description="COM_CREATIVEIMAGESLIDER_IMAGE_DESCRIPTION" class="input_url" preview="tooltip" />
+		<field name="redirect_itemid" type="menuitem" state="1" disable="menulink, separator" label="COM_CREATIVEIMAGESLIDER_LABEL_REDIRECTMENUITEM_TITLE" description="COM_CREATIVEIMAGESLIDER_LABEL_REDIRECTMENUITEM_DESC" />
+		<field name="popup_img_name" type="media" label="COM_CREATIVEIMAGESLIDER_POPUP_IMAGE_LABEL" description="COM_CREATIVEIMAGESLIDER_POPUP_IMAGE_DESCRIPTION" class="input_url" preview="tooltip" />
+	</fieldset>
+</form>

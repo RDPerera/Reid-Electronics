@@ -1,0 +1,89 @@
+.cis_main_wrapper {
+	float: none !important;
+	position: relative;
+	line-height: 0px;
+	
+	top: 0;
+	left: 0;
+}
+.cis_images_row {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.cis_images_holder {
+	margin: 0;
+	padding: 0;
+	width: 999999px;
+	height: auto;
+	overflow: hidden;
+}
+.cis_row_item {
+	float: left;
+	padding: 0;
+	position: relative;
+}
+.cis_row_item img {
+	margin: 0 !important;
+	padding: 0 !important;
+	border: none !important;
+	max-width: none !important;
+	max-height: none !important;
+}
+.cis_row_item_overlay {
+	position: absolute;
+	height: auto;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	display: none;
+	-webkit-box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.25);
+	box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.25);
+}
+.cis_row_item_overlay_txt {
+	line-height: 1.2;
+}
+
+.cis_row_item_loader {
+	width: 250px;
+	background-size:31px 31px !important;
+}
+.cis_row_item_loader_color1 {
+	background: white url("../images/loading1.gif") center center no-repeat;
+}
+.cis_row_item_loader_color2 {
+	background: #000 url("../images/loading.gif") center center no-repeat;
+}
+.cis_row_item_inner {
+
+}
+.cis_row_hidden_element {
+	position: absolute !important;
+	display: block !important;
+	top: -10000px;
+	left: -10000px;
+}
+
+
+.cis_button_left {
+display: block;
+position: absolute;
+top: -10000px;
+left: -10000px;
+z-index: 10000;
+cursor: pointer;
+}
+.cis_button_right {
+display: block;
+position: absolute;
+top: -10000px;
+right: -10000px;
+z-index: 10000;
+cursor: pointer;
+}
+
+
+
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.3">
+    <name>SMS Notification Package</name>
+    <author>Mobiweb</author>
+    <creationDate>February 2015</creationDate>
+    <license>GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html</license>
+    <packagename>isms</packagename>
+    <version>1.0.6</version>
+    <description>iSMS package</description>
+    <files folder="packages">
+        <file type="component" id="com_smsnotification">com_sms_notification.zip</file>
+        <file type="plugin" id="isms" group="contact">plg_contact_isms.zip</file>
+        <file type="plugin" id="smsnotificationprofile" group="user">plg_user_sms_notification.zip</file>
+    </files>
+</extension>
