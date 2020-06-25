@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: default.xml 10880 2008-08-31 17:51:53Z willebil $ -->
+<metadata>
+	<layout title="GMAPFP_VUE_ARTICLE">
+		<message>
+			<![CDATA[GMAPFP_VUE_ARTICLE_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request"
+		 	addfieldpath="/administrator/components/com_gmapfp/models/fields">
+			<field name="id" type="modal_article"
+				description="GMAPFP_SELECT_ARTICLE_DESC"
+				label="GMAPFP_SELECT_ARTICLE"
+				required="true"
+			/>
+		</fieldset>
+	</fields>
+
+	<fields name="params">
+		<fieldset name="advanced" label="GMAPFP_PARAMS_LABEL" >
+			<field name="gmapfp_geoXML" type="textarea" default="" label="GMAPFP_GEO_XML" cols="35" rows="3" description="GMAPFP_GEO_XML_DESC" />
+		</fieldset>
+	</fields>
+</metadata>

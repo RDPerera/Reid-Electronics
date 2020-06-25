@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+   <layout title="Creative Slider" option="Creative Slider">
+      <message>
+         <![CDATA[Shows a single Creative Slider]]>
+      </message>
+   </layout>
+   <state>
+      <name>Creative Slider</name>
+      <description>Shows a single Creative Slider</description>
+      <url addpath="/administrator/components/com_creativeimageslider/elements">
+         <param name="slider" type="slider" section="com_creativeimageslider" default="0" label="Poll" description="Shows a single Creative Slider" required="true"/>
+      </url>
+      <params>
+      </params>
+   </state>
+   
+    <fields name="request">
+		<fieldset name="request" label="Slider Options" addfieldpath="/administrator/components/com_creativeimageslider/fields">
+			 <field name="slider" type="slider" section="com_creativeimageslider" default="0" label="Slider" description="Shows a single Creative Slider" required="true"/>
+		</fieldset>
+	</fields>
+</metadata>

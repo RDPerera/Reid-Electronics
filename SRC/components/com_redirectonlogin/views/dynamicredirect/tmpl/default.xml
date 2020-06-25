@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_REDIRECTONLOGIN_DYNAMIC_REDIRECT">
+		<message><![CDATA[COM_REDIRECTONLOGIN_DYNAMIC_REDIRECT_DESC]]></message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request">
+			<field
+				name="id"
+				type="dynamicredirectid"
+				extension="com_redirectonlogin"
+				label="COM_REDIRECTONLOGIN_DYNAMIC_REDIRECT"
+				description="COM_REDIRECTONLOGIN_DYNAMIC_REDIRECT_DESC"
+				required="true"
+				addfieldpath="/components/com_redirectonlogin/params"
+			>				
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

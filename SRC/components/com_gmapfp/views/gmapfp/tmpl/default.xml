@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: default.xml 10880 2008-08-31 17:51:53Z willebil $ -->
+<metadata>
+	<layout title="GMAPFP_VUE_DEFAUT">
+		<message>
+			<![CDATA[GMAPFP_VUE_DEFAUT_DESC]]>
+		</message>
+	</layout>
+	<fields name="params">
+		<fieldset name="basic" label="GMAPFP_USE_GLOBAL"
+		 addfieldpath="/administrator/components/com_gmapfp/models/fields">
+			
+			<field name="id_perso" type="modal_perso" default="0" label="GMAPFP_SELECT_PERSO" description="GMAPFP_SELECT_PERSO_DESC" />
+			<field name="type_affichage" type="list" default="1" label="GMAPFP_MAIN_AFFICHAGE" description="GMAPFP_TYPE_AFFICHAGE_DESC">
+				<option value="0">GMAPFP_MAIN_AFFICHAGE_COMPLET</option>
+				<option value="1">GMAPFP_MAIN_AFFICHAGE_ARTICLES_CARTE</option>
+				<option value="2">GMAPFP_MAIN_AFFICHAGE_CARTE</option>
+				<option value="3">GMAPFP_MAIN_AFFICHAGE_LISTE_ARTICLE</option>
+			</field>
+
+		<field name="spacer1" type="spacer" hr="true" />
+
+			<field name="nombre_articles" type="text" size="3" default="5" label="GMAPFP_NOMBRE_ARTICLES" description="GMAPFP_NOMBRE_ARTICLES_DESC" />
+			<field name="show_pagination" type="radio" default="1" label="JGLOBAL_PAGINATION_LABEL" description="JGLOBAL_PAGINATION_DESC" class="btn-group">
+				<option value="0">JHide</option>
+				<option value="1">JGLOBAL_AUTO</option>
+			</field>
+			<field name="show_pagination_results" type="radio" default="1" label="JGLOBAL_PAGINATION_RESULTS_LABEL" description="JGLOBAL_PAGINATION_RESULTS_DESC" class="btn-group">
+				<option value="0">JHide</option>
+				<option value="1">JShow</option>
+			</field>
+		</fieldset>
+		<fieldset name="categories" label="GMAPFP_CATEGORIES_OPTIONS">
+			<field name="catid" type="category"
+				description="JGLOBAL_FIELD_CATEGORIES_CHOOSE_CATEGORY_DESC"
+				extension="com_gmapfp"
+				label="JGLOBAL_FIELD_CATEGORIES_CHOOSE_CATEGORY_LABEL"
+				show_root="true"
+				required="false"
+			/>
+			<field name="recursive" type="radio" default="1" label="JGLOBAL_SHOW_SUBCATEGORY_CONTENT_LABEL" description="JGLOBAL_SHOW_SUBCATEGORY_CONTENT_LABEL" class="btn-group">
+				<option value="0">JNo</option>
+				<option value="1">JYes</option>
+			</field>
+		</fieldset>
+		<fieldset name="advanced" label="GMAPFP_PARAMS_LABEL" >
+			<field name="orderby_pri" type="list" default="" label="JFIELD_ORDERING_LABEL" description="JFIELD_ORDERING_DESC">
+				<option value="">GMAPFP_NON_TRIE</option>
+				<option value="alpha">GMAPFP_TRIE_NOM</option>
+				<option value="ralpha">GMAPFP_TRIE_NOM_DESC</option>
+				<option value="ville">GMAPFP_TRIE_VILLE</option>
+				<option value="rville">GMAPFP_TRIE_VILLE_DESC</option>
+				<option value="pays">GMAPFP_TRIE_PAY</option>
+				<option value="rpays">GMAPFP_TRIE_PAY_DESC</option>
+				<option value="paysvilles">GMAPFP_TRIE_PAY_VILLE</option>
+				<option value="rpaysvilles">GMAPFP_TRIE_PAY_VILLE_DESC</option>
+				<option value="order">Ordering</option>
+			</field>
+
+		<field name="spacer2" type="spacer" hr="true" />
+
+			<field name="gmapfp_filtre_sql" type="text" size="60" default="" label="GMAPFP_FILTRE_SQL" description="GMAPFP_FILTRE_SQL_DESC" />
+			<field name="gmapfp_geoXML" type="textarea" default="" label="GMAPFP_GEO_XML" cols="35" rows="3" description="GMAPFP_GEO_XML_DESC" />
+
+			<field name="spacer3" type="spacer" hr="true" />
+
+			<field name="gmapfp_itineraire" type="list" default="" label="GMAPFP_ITINERAIRE" description="GMAPFP_ITINERAIRE_DESC">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field name="gmapfp_filtre" type="list" default="" label="GMAPFP_FILTRE" description="GMAPFP_FILTRE_DESC">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+	</fieldset>
+</fields>
+</metadata>

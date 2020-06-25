@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_EVENTGALLERY_LAYOUT_EVENT_DEFAULT_LIST">
+        <message>
+            <![CDATA[COM_EVENTGALLERY_LAYOUT_EVENT_DEFAULT_LIST_MESSAGE]]>
+        </message>
+    </layout>
+    <!-- Add fields to the request variables for the layout. -->
+    <fields name="request">
+        <fieldset name="request"
+                  addfieldpath="/administrator/components/com_eventgallery/models/fields">
+
+            <field name="folder" type="modal_folder"
+                   label="COM_EVENTGALLERY_LAYOUT_EVENT_FOLDER_LABEL"
+                   required="true"
+                   description="COM_EVENTGALLERY_LAYOUT_EVENT_FOLDER_DESC"
+                    />
+        </fieldset>
+    </fields>
+    <fields name="params" addfieldpath="/components/com_eventgallery/models/fields">
+        <fieldset name="params" label="COM_EVENTGALLERY_LAYOUT_EVENT_FIELDSET_LABEL">
+            <!-- AUTO GENERATED BEGIN -->
+<field name="event_header_tag" type="list" class="" useglobal="true" default="" label="COM_EVENTGALLERY_OPTIONS_EVENT_HEAD_TAG_LABEL"
+       description="COM_EVENTGALLERY_OPTIONS_EVENT_HEAD_TAG_DESC">
+
+    <option value="H1">H1</option>
+    <option value="H2">H2</option>
+    <option value="H3">H3</option>
+    <option value="H4">H4</option>
+</field>
+<!-- AUTO GENERATED END -->
+
+            <!-- AUTO GENERATED BEGIN -->
+    <field name="use_event_paging" type="radio" class="btn-group btn-group-yesno" default="" label="COM_EVENTGALLERY_OPTIONS_EVENT_USE_PAGING_LABEL"
+           description="COM_EVENTGALLERY_OPTIONS_EVENT_USE_PAGING_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+    </field> 
+<!-- AUTO GENERATED END -->
+
+            <!-- AUTO GENERATED BEGIN -->
+    <field name="show_exif" type="radio" class="btn-group btn-group-yesno" default="" label="COM_EVENTGALLERY_OPTIONS_SHOW_EXIF_LABEL"
+           description="COM_EVENTGALLERY_OPTIONS_SHOW_EXIF_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+    </field>
+    <field name="show_date" type="radio" class="btn-group btn-group-yesno" default="" label="COM_EVENTGALLERY_OPTIONS_SHOW_DATE_LABEL"
+           description="COM_EVENTGALLERY_OPTIONS_SHOW_DATE_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+    </field>
+    <field name="show_image_filename" type="radio" class="btn-group btn-group-yesno" default="" label="COM_EVENTGALLERY_OPTIONS_COMMON_SHOWIMAGEFILENAME_LABEL"
+            description="COM_EVENTGALLERY_OPTIONS_COMMON_SHOWIMAGEFILENAME_DESCRIPTION">
+            <option value="">JGLOBAL_USE_GLOBAL</option>
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+     </field>
+
+    <field name="show_image_title" type="radio" class="btn-group btn-group-yesno" default="" label="COM_EVENTGALLERY_OPTIONS_COMMON_SHOWIMAGETITLE_LABEL" description="COM_EVENTGALLERY_OPTIONS_COMMON_SHOWIMAGETITLE_DESCRIPTION">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+    </field>
+
+    <field name="show_image_caption" type="radio" class="btn-group btn-group-yesno" default="" label="COM_EVENTGALLERY_OPTIONS_COMMON_SHOWIMAGECAPTION_LABEL" description="COM_EVENTGALLERY_OPTIONS_COMMON_SHOWIMAGECAPTION_DESCRIPTION">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+    </field>
+<!-- AUTO GENERATED END -->
+
+            		
+		<!-- AUTO GENERATED BEGIN -->
+   			<field name="event_default_list_thumbnail_height" id="event_default_list_thumbnail_height" type="integerwithdefault"
+                   first="0" last="1000" step="10" default=""
+                   label="COM_EVENTGALLERY_OPTIONS_EVENT_THUMBNAIL_HEIGHT_LABEL"
+                   description="COM_EVENTGALLERY_OPTIONS_EVENT_THUMBNAIL_HEIGHT_DESC"/>
+            <field name="event_default_list_thumbnail_jitter" type="integerwithdefault"
+                   first="0" last="500" step="10" default=""
+                   label="COM_EVENTGALLERY_OPTIONS_EVENT_THUMBNAIL_JITTER_LABEL"
+                   description="COM_EVENTGALLERY_OPTIONS_EVENT_THUMBNAIL_JITTER_DESC"/>
+            <field name="event_default_list_thumbnail_first_item_height"
+                   type="integerwithdefault" first="1" last="10" step="1"
+                   default="" label="COM_EVENTGALLERY_OPTIONS_EVENT_THUMBNAIL_HEIGHT_FIRSTITEM_LABEL"
+                   description="COM_EVENTGALLERY_OPTIONS_EVENT_THUMBNAIL_HEIGHT_FIRSTITEM_DESC"/>
+            <field name="show_singlepage_imagehits" type="radio" class="btn-group btn-group-yesno" default="" label="COM_EVENTGALLERY_OPTIONS_SHOW_IMAGEHITS_LABEL"
+                   description="COM_EVENTGALLERY_OPTIONS_SHOW_IMAGEHITS_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+			<field name="show_default_image_caption_overlay" type="radio" class="btn-group btn-group-yesno" default="" label="COM_EVENTGALLERY_OPTIONS_SHOW_IMAGE_CAPTION_OVERLAY_LABEL"
+		           description="COM_EVENTGALLERY_OPTIONS_SHOW_IMAGE_CAPTION_OVERLAY_DESC">
+		        <option value="">JGLOBAL_USE_GLOBAL</option>
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+		    </field>
+		    <!-- AUTO GENERATED END -->
+		    
+             
+        </fieldset>
+
+        <fieldset name="lightbox" label="COM_EVENTGALLERY_OPTIONS_LIGHTBOX_LABEL" description="COM_EVENTGALLERY_OPTIONS_LIGHTBOX_DESC">
+
+    <field name="lightbox_navgation_fade_delay"
+       type="integerwithdefault" first="500" last="10000" step="500" default=""
+       label="COM_EVENTGALLERY_OPTIONS_LIGHTBOX_NAV_FADE_DELAY_LABEL"
+       description="COM_EVENTGALLERY_OPTIONS_LIGHTBOX_NAV_FADE_DELAY_DESC"/>
+
+    <field name="lightbox_prevent_right_click" type="radio" class="btn-group btn-group-yesno" default=""
+           label="COM_EVENTGALLERY_OPTIONS_USE_LIGHTBOX_PREVENT_RIGHT_CLICK_LABEL"
+           description="COM_EVENTGALLERY_OPTIONS_USE_LIGHTBOX_PREVENT_RIGHT_CLICK_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+    </field>
+
+
+    <field type="spacer" name="myspacer" label="COM_EVENTGALLERY_OPTIONS_SLIDESHOW_LABEL" />
+
+    <field name="use_lightbox_slideshow" type="radio" class="btn-group btn-group-yesno" default=""
+           label="COM_EVENTGALLERY_OPTIONS_USE_LIGHTBOX_SLIDESHOW_LABEL"
+           description="COM_EVENTGALLERY_OPTIONS_USE_LIGHTBOX_SLIDESHOW_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+    </field>
+
+    <field name="use_lightbox_slideshow_autoplay" type="radio" class="btn-group btn-group-yesno" default=""
+           label="COM_EVENTGALLERY_OPTIONS_USE_LIGHTBOX_SLIDESHOW_AUTOPLAY_LABEL"
+           description="COM_EVENTGALLERY_OPTIONS_USE_LIGHTBOX_SLIDESHOW_AUTOPLAY_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+    </field>
+
+    <field name="lightbox_slideshow_speed"
+           type="integerwithdefault" first="500" last="60000" step="500" default=""
+           label="COM_EVENTGALLERY_OPTIONS_USE_LIGHTBOX_SLIDESHOW_SPEED_LABEL"
+           description="COM_EVENTGALLERY_OPTIONS_USE_LIGHTBOX_SLIDESHOW_SPEED_DESC"/>
+
+</fieldset>
+
+
+    </fields>
+</metadata>
